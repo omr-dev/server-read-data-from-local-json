@@ -1,4 +1,9 @@
+import fs from 'fs';
+
+
 export const model = () => {
-  const data = { title: "test data" };
-  return data;
+const books = JSON.parse(fs.readFileSync('./data/books.json'));
+ 
+   
+  return {books};
 };
